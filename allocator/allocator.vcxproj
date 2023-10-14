@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{48246282-7f95-466f-af21-c62f98cd09f3}</ProjectGuid>
+    <RootNamespace>allocator</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="allocator.cpp" />
+    <ClCompile Include="allocator_holder.cpp" />
+    <ClCompile Include="allocator_sorted_list.cpp" />
+    <ClCompile Include="logger.cpp" />
+    <ClCompile Include="logger_builder.cpp" />
+    <ClCompile Include="logger_builder_concrete.cpp" />
+    <ClCompile Include="logger_concrete.cpp" />
+    <ClCompile Include="logger_holder.cpp" />
+    <ClCompile Include="not_implemented.cpp" />
+    <ClCompile Include="operation_not_supported.cpp" />
+    <ClCompile Include="Source.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="abi_macros.hpp" />
+    <ClInclude Include="adl_serializer.hpp" />
+    <ClInclude Include="allocator.h" />
+    <ClInclude Include="allocator_fit_allocation.h" />
+    <ClInclude Include="allocator_holder.h" />
+    <ClInclude Include="allocator_sorted_list.h" />
+    <ClInclude Include="begin.hpp" />
+    <ClInclude Include="binary_reader.hpp" />
+    <ClInclude Include="binary_writer.hpp" />
+    <ClInclude Include="byte_container_with_subtype.hpp" />
+    <ClInclude Include="cpp_future.hpp" />
+    <ClInclude Include="detected.hpp" />
+    <ClInclude Include="end.hpp" />
+    <ClInclude Include="exceptions.hpp" />
+    <ClInclude Include="from_json.hpp" />
+    <ClInclude Include="hash.hpp" />
+    <ClInclude Include="hedley.hpp" />
+    <ClInclude Include="hedley_undef.hpp" />
+    <ClInclude Include="identity_tag.hpp" />
+    <ClInclude Include="input_adapters.hpp" />
+    <ClInclude Include="internal_iterator.hpp" />
+    <ClInclude Include="is_sax.hpp" />
+    <ClInclude Include="iteration_proxy.hpp" />
+    <ClInclude Include="iterator_traits.hpp" />
+    <ClInclude Include="iter_impl.hpp" />
+    <ClInclude Include="json.hpp" />
+    <ClInclude Include="json_custom_base_class.hpp" />
+    <ClInclude Include="json_fwd.hpp" />
+    <ClInclude Include="json_pointer.hpp" />
+    <ClInclude Include="json_ref.hpp" />
+    <ClInclude Include="json_reverse_iterator.hpp" />
+    <ClInclude Include="json_sax.hpp" />
+    <ClInclude Include="lexer.hpp" />
+    <ClInclude Include="logger.h" />
+    <ClInclude Include="logger_builder.h" />
+    <ClInclude Include="logger_builder_concrete.h" />
+    <ClInclude Include="logger_concrete.h" />
+    <ClInclude Include="logger_holder.h" />
+    <ClInclude Include="macro_scope.hpp" />
+    <ClInclude Include="macro_unscope.hpp" />
+    <ClInclude Include="not_implemented.h" />
+    <ClInclude Include="operation_not_supported.h" />
+    <ClInclude Include="ordered_map.hpp" />
+    <ClInclude Include="output_adapters.hpp" />
+    <ClInclude Include="parser.hpp" />
+    <ClInclude Include="position_t.hpp" />
+    <ClInclude Include="primitive_iterator.hpp" />
+    <ClInclude Include="serializer.hpp" />
+    <ClInclude Include="std_fs.hpp" />
+    <ClInclude Include="string_concat.hpp" />
+    <ClInclude Include="string_escape.hpp" />
+    <ClInclude Include="to_chars.hpp" />
+    <ClInclude Include="to_json.hpp" />
+    <ClInclude Include="typename_holder.h" />
+    <ClInclude Include="type_traits.hpp" />
+    <ClInclude Include="value_t.hpp" />
+    <ClInclude Include="void_t.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
